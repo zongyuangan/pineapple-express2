@@ -1,81 +1,33 @@
 <link href="css/style3.css" rel="stylesheet"> 
 <html lang="en">
-
-<script>
-$(document).ready(function(){    
-    $("#button1").click(function(){
-        $(#"thing").hide();
-    });
-});
-</script>
 <head>
-  <title>Pineapple Express</title>
+<title>Pineapple Express</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="js/jquery-1-12.0.min.js"></script>
-  <!--<style>
-  body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-      color: #f5f6f7;
-  }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 { 
-      background: url(http://s8.favim.com/orig/150909/apple-background-colors-cool-Favim.com-3265399.jpg); /* Pineapple Wallpaper*/
-      color: #000000;
-  }
-  .bg-2 { 
-      background-color: #474e5d; /* Dark Blue */
-      color: #ffffff;
-  }
-  .bg-3 { 
-      background-color: #ffffff; /* White */
-      color: #555555;
-  }
-  .bg-4 { 
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-  }
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-  }
-  .container-fluid2 {
-      padding-top: 140px;
-      padding-bottom: 140px;
-  }
-  .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
-  .font {font-size: 400%;
-  		 font-weight: 900;
-  		}
-  	.h1 {
-  color: white;
-  text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
- }
-  </style>-->
+  <script src="js/jquery-1.12.0.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#button").click(function(){
+        $("#panel").fadeIn("slow");
+    });
+});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73721501-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
-  <button id="button1"> Hello </button>
 
 <!-- Navbar -->
 <nav class="navbar navbar-default">
@@ -90,7 +42,16 @@ $(document).ready(function(){
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">OUR MISSION</a></li>
+              <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Our Mission
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li> 
+        </ul>
+      </li>
+
         <li><a href="#">OUR TEAM</a></li>
         <li><a href="#">NEWS</a></li>
         <li><a href="#">CONTACT US</a></li>
@@ -98,6 +59,7 @@ $(document).ready(function(){
     </div>
   </div>
 </nav>
+<button id="button"> Click Me</button>
 
 <!-- First Container -->
 <div class="container-fluid2 bg-1 text-center">
@@ -106,8 +68,8 @@ $(document).ready(function(){
 </div>
 
 <!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
-  <h3 id="thing" class="margin">Who Are We?</h3>
+<div id="panel" class="container-fluid bg-2 text-center">
+  <h3 class="margin">Who Are We?</h3>
   <p>GERD Relief targetting the main problem of Indigestion</p>
   <a href="#" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-search"></span> Search
