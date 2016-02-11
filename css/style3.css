@@ -42,9 +42,12 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
-  .font {font-size: 400%;
-  		 font-weight: 900;
-  		}
+  .font {
+    font-size: 400%;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+  }
   	.h1 {
   color: white;
   text-shadow:
